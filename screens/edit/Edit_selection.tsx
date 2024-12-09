@@ -7,7 +7,7 @@ import {getWikiDataById} from "../../shared/api";
 import {Divider} from "../../components/atom";
 import {CategoryLink, WikiContents} from "../../components/molecule";
 import {useScrollToCategory} from "../../shared/hooks";
-import {AddCategoryButton, CompleteButton, Modal} from "../../widgets/edit_screen";
+import {AddCategoryButton} from "../../widgets/edit_screen";
 
 export default function Edit_selection_screen() {
   const {userId} = useRoute().params;
@@ -19,11 +19,6 @@ export default function Edit_selection_screen() {
 
   const navigation = useNavigation();
 
-  const handleComplete = () => {
-    // 수정 정보 올리기
-    // console.log(TODO)
-  };
-
   return (
     <SafeAreaView style={{flex: 1}}>
       {/*{isModalOpen && <Modal setModal={setIsModalOpen}/>}*/}
@@ -32,9 +27,6 @@ export default function Edit_selection_screen() {
           isBackButton: true,
           contents: wikiData.userName,
         }}
-        RightContents={
-          <CompleteButton handleComplete={handleComplete}/>
-        }
       />
       <View style={style.container}>
         <View style={{flex: 1}}>

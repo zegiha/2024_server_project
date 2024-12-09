@@ -1,6 +1,7 @@
 import {IWikiData} from "../type";
 
 export default function getWikiDataById(userId: string): IWikiData {
+  // TODO 위키 정보 유저아이디로 불러오기
   if(userId) {
     return {
       userName: '류현규',

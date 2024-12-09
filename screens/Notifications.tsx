@@ -20,6 +20,7 @@ function getNotifications(): Array<INotification> {
 }
 
 export default function Notifications_screen() {
+  // TODO 알림 불러오기
   const [notifications, setNotifications] = useState(getNotifications());
   return (
     <SafeAreaView style={style.container}>

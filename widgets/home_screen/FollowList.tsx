@@ -20,6 +20,7 @@ function getFriendsWikiSummary(): Array<IWikiSummary> {
 }
 
 export default function FollowList() {
+  // TODO FollowList의 논란 불러오기
   const friendsWikiSummary = getFriendsWikiSummary();
   const navigation = useNavigation();
 

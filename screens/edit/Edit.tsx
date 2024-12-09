@@ -1,5 +1,5 @@
 import {KeyboardAvoidingView, SafeAreaView, StyleSheet, View} from "react-native";
-import {useRoute} from "@react-navigation/native";
+import {useNavigation, useRoute} from "@react-navigation/native";
 import {Header, TextInput} from "../../components/molecule";
 import {Pressable, Typo} from "../../components/atom";
 import React, {useState} from "react";
@@ -12,6 +12,8 @@ export default function Edit_screen() {
 
   const [category, setCategory] = useState<string>(changeCategory === 'new' ? '' : changeCategory);
   const [contents, setContents] = useState<string>(rootContents === 'new' ? '' : rootContents)
+
+  const navigation = useNavigation()
 
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -32,7 +34,10 @@ export default function Edit_screen() {
       </KeyboardAwareScrollView>
       <View style={style.buttonContainer}>
         <Pressable
-          onPress={() => {console.log('submit')}}
+          onPress={() => {
+            // TODO 수정정보 올리기
+            navigation.goBack();
+          }}
           style={style.button}
           backgroundColor={{active: Colors.primary700, normal: Colors.primary600}}
         >

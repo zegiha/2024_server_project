@@ -7,7 +7,6 @@ import {Header} from "../components/molecule";
 
 export default function Home_Screen() {
   const [hasNotifications, setHasNotifications] = useState<boolean>(false);
-
   return (
     <SafeAreaView style={style.container}>
       <Header
@@ -20,6 +19,7 @@ export default function Home_Screen() {
           style={{...style.wiki, ...style.myWiki}}
         >
           <View style={style.wikiText}>
+            {/*TODO 내 논란 불러오기*/}
             <Typo.Body emphasize color={'variable'}>내 새로운 논란 보러가기</Typo.Body>
             <Typo.Caption color={'dim'}>12분 전 수정</Typo.Caption>
           </View>
