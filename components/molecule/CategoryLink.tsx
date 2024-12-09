@@ -1,6 +1,6 @@
 import {View, StyleSheet, TouchableOpacity} from "react-native";
 import {Colors} from "../../shared/constants/color.ts";
-import {Typo} from "../../components/Typo.tsx";
+import {Typo} from "../atom";
 
 export default function CategoryLink({
   category,

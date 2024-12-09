@@ -1,9 +1,7 @@
 import {Animated, View, StyleSheet} from "react-native";
-import Pressable from "../../components/Pressable.tsx";
 import {useState} from "react";
 import {Colors} from "../../shared/constants/color.ts";
-import {Typo} from "../../components/Typo.tsx";
-import Icon from "../../components/Icon.tsx";
+import {Typo, Icon, Pressable} from "../../components/atom";
 import {INotification} from "../../screens/Notifications.tsx";
 import {useNavigation} from "@react-navigation/native";
 

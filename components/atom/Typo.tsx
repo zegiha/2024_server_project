@@ -1,8 +1,8 @@
 import {Text, DimensionValue} from "react-native";
-import {Colors} from "../shared/constants/color.ts";
+import {Colors} from "../../shared/constants/color.ts";
 import {ReactNode} from "react";
 
-type textColors = 'dim' | 'normal' | 'variable' | 'warn' | 'primary';
+type textColors = 'dim' | 'normal' | 'variable' | 'warn' | 'primary' | 'white';
 
 interface ITypo {
   children: ReactNode
@@ -35,8 +35,9 @@ function BaseTypo({
       case 'variable': return Colors.gray800;
       case 'primary': return Colors.primary600;
       case 'warn': return Colors.systemRed;
+      case 'white': return Colors.gray010;
     }
-  }
+  };
   return <Text
     style={{
       fontFamily: 'Wanted Sans',

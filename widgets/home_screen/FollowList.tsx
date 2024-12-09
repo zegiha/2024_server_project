@@ -1,6 +1,6 @@
 import {ScrollView, View, StyleSheet} from "react-native";
-import {Typo} from "../../components/Typo.tsx";
-import Pressable from "../../components/Pressable.tsx";
+import {Typo} from "../../components/atom/Typo.tsx";
+import Pressable from "../../components/atom/Pressable.tsx";
 import {useNavigation} from "@react-navigation/native";
 
 interface IWikiSummary {

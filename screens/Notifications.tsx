@@ -1,7 +1,7 @@
 import {SafeAreaView, StyleSheet, ScrollView, View} from "react-native";
-import Header from "../components/Header.tsx";
 import {useState} from "react";
 import {NotificationBox} from "../widgets/notifications_screen";
+import {Header} from "../components/molecule";
 
 export interface INotification {
   userId: string,

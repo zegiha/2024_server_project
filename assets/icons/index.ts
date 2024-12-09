@@ -4,6 +4,8 @@ import Arrow_ios from './arrow_ios.svg'
 import Notifications from './notifications.svg'
 import UnreadNotifications from './notifications_unread.svg'
 import Edit_variable from './edit_variable.svg'
+import Edit_24_gray from './edit_24_gray.svg'
+import Add from './add.svg';
 
 export {
   ArrowBack,
@@ -11,5 +13,7 @@ export {
   Arrow_ios,
   Notifications,
   UnreadNotifications,
-  Edit_variable
+  Edit_variable,
+  Edit_24_gray,
+  Add,
 };

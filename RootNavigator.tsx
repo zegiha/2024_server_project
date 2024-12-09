@@ -4,6 +4,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import {Colors} from "./shared/constants/color.ts";
 import {
   Edit_screen,
+  Edit_selection_screen,
   Home_Screen,
   Notifications_screen,
   Wiki_Screen,
@@ -25,7 +26,8 @@ function RootNavigator(): React.JSX.Element {
         <Stack.Screen name={'Notifications'} component={Notifications_screen}/>
         <Stack.Screen name={'Wiki'} component={Wiki_Screen}/>
         <Stack.Group>
-          <Stack.Screen name={'edit'} component={Edit_screen}/>
+          <Stack.Screen name={'Edit/Selection'} component={Edit_selection_screen}/>
+          <Stack.Screen name={'Edit'} component={Edit_screen}/>
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

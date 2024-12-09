@@ -1,9 +1,7 @@
 import {View, StyleSheet} from "react-native";
-import {Colors} from "../shared/constants/color.ts";
-import Pressable from "./Pressable.tsx";
-import Icon from "./Icon.tsx";
-import {Typo} from "./Typo.tsx";
-import LogoImage from '../assets/logo.svg'
+import {Colors} from "../../shared/constants/color.ts";
+import {Typo, Icon, Pressable} from "../atom";
+import LogoImage from '../../assets/logo.svg'
 import {useNavigation} from "@react-navigation/native";
 import React from "react";
 
@@ -11,6 +9,7 @@ interface IHeader{
   logo?: boolean;
   backButton?: {
     isBackButton: boolean,
+    backFunc?: () => void,
     contents?: string,
   }
   edit?: {
@@ -41,7 +40,13 @@ export default function Header({
         )}
         {backButton?.isBackButton && (
           <Pressable
-            onPress={() => navigation.canGoBack() ? navigation.goBack() : navigation.navigate('Home')}
+            onPress={() => {
+              if(backButton?.backFunc !== undefined) {
+                backButton.backFunc();
+              } else {
+                navigation.canGoBack() ? navigation.goBack() : navigation.navigate('Home');
+              }
+            }}
             style={style.backButton}
           >
             <Icon icon={'arrow_back'}/>
@@ -64,7 +69,7 @@ export default function Header({
         )}
         {edit?.isEdit && (
           <Pressable
-            onPress={() => navigation.navigate('Edit', {editSubjectId: edit?.editSubjectId})}
+            onPress={() => navigation.navigate('Edit/Selection', {userId: edit?.editSubjectId})}
             style={style.iconButton}
           >
             <Icon icon={'edit'}/>

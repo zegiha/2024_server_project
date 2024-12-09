@@ -1,11 +1,9 @@
 import {SafeAreaView, StyleSheet, View} from "react-native";
-import Header from "../components/Header.tsx";
 import {useState} from "react";
-import Pressable from "../components/Pressable.tsx";
 import {Colors} from "../shared/constants/color.ts";
-import {Typo} from "../components/Typo.tsx";
-import Icon from "../components/Icon.tsx";
+import {Typo, Icon, Pressable} from "../components/atom";
 import {FollowList} from "../widgets/home_screen";
+import {Header} from "../components/molecule";
 
 export default function Home_Screen() {
   const [hasNotifications, setHasNotifications] = useState<boolean>(false);
